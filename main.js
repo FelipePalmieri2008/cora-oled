@@ -49,3 +49,10 @@ function atualizaCronometro() {
         document.getElementById("seg" + i).textContent = calculaTempo(tempos[i])[3];
     }
 }
+
+function comecaCronometro() {
+    atualizaCronometro();
+    setInterval(atualizaCronometro, 1000);
+}
+
+comecaCronometro();
